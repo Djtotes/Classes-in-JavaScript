@@ -1,5 +1,31 @@
 <html>
     <body>
-        
+        <p id="i1"></p>
+        <p id="i2"></p>
+        <p id="i3"></p>
+        <script>
+            class student{
+                constructor(name,year){
+                    this.name=name;
+                    this.year=year;
+                }
+                age(){
+                    let d=new Date();
+                    return d.getFullYear()-this.year;
+                }
+            }
+            class result extends student{
+                constructor(name,year,per){
+                    super(name,year);
+                    this.percent=per;
+                }
+                show(){return this.age()+" , I scored "+this.percent+"%";}
+            }
+            s1=new student("Success",2008);
+            document.getElementById("i1").innerHTML="My name is "+s1.name+", I born in "+s1.year+", and my age is "+s1.age();
+
+            s2=new result("Jharoor",2006,81);
+            document.getElementById("i2").innerHTML="My name is " + s2.name +", I born in " + s2.year + ", and my age is "+s2.show();
+        </script>
     </body>
 </html>
