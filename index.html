@@ -20,12 +20,14 @@
                     this.percent=per;
                 }
                 show(){return this.age()+" , I scored "+this.percent+"%";}
+            
+                static view(){return "...Hey";}
             }
             s1=new student("Success",2008);
             document.getElementById("i1").innerHTML="My name is "+s1.name+", I born in "+s1.year+", and my age is "+s1.age();
 
             s2=new result("Jharoor",2006,81);
-            document.getElementById("i2").innerHTML="My name is " + s2.name +", I born in " + s2.year + ", and my age is "+s2.show();
+            document.getElementById("i2").innerHTML="My name is " + s2.name +", I born in " + s2.year + ", and my age is "+s2.show()+result.view();
         </script>
     </body>
 </html>
